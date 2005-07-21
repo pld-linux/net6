@@ -1,4 +1,5 @@
 Summary:	Net6 network library
+Summary(pl):	Biblioteka sieciowa net6
 Name:		net6
 Version:	1.0.1
 Release:	1
@@ -12,18 +13,21 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Net6 network library.
 
+%description -l pl
+Biblioteka sieciowa net6.
+
 %package devel
-Summary:	Header files and develpment documentation for net6
-Summary(pl):	Pliki nag³ówkowe i dokumetacja do net6
+Summary:	Header files for net6
+Summary(pl):	Pliki nag³ówkowe biblioteki net6
 Summary(pt_BR):	Arquivos do pacote net6 para desenvolvimento
 Group:		Development/Libraries
-Requires:	%{name} = %{epoch}:%{version}-%{release}
+Requires:	%{name} = %{version}-%{release}
 
 %description devel
-Header files and develpment documentation for net6.
+Header files for net6.
 
 %description devel -l pl
-Pliki nag³ówkowe i dokumentacja do net6.
+Pliki nag³ówkowe biblioteki net6.
 
 %description devel -l pt_BR
 Arquivos de cabeçalho e bibliotecas usadas no desenvolvimento de
@@ -34,7 +38,7 @@ Summary:	Static net6 library
 Summary(pl):	Biblioteka statyczna net6
 Summary(pt_BR):	Arquivos do pacote net6 para desenvolvimento estático
 Group:		Development/Libraries
-Requires:	%{name}-devel = %{epoch}:%{version}-%{release}
+Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static net6 library.
