@@ -8,6 +8,7 @@ Group:		Libraries
 Source0:	http://releases.0x539.de/net6/%{name}-%{version}.tar.gz
 # Source0-md5:	522229474ff554a4ce883002011d0fbb
 URL:		http://gobby.0x539.de/
+BuildRequires:	libsigc++-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
