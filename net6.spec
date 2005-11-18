@@ -23,6 +23,7 @@ Summary(pl):	Pliki nag³ówkowe biblioteki net6
 Summary(pt_BR):	Arquivos do pacote net6 para desenvolvimento
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
+Requires:	libsigc++-devel
 
 %description devel
 Header files for net6.
