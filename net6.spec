@@ -1,14 +1,17 @@
 Summary:	Net6 network library
 Summary(pl):	Biblioteka sieciowa net6
 Name:		net6
-Version:	1.1.0
+Version:	1.2.0
 Release:	1
 License:	BSD
 Group:		Libraries
 Source0:	http://releases.0x539.de/net6/%{name}-%{version}.tar.gz
-# Source0-md5:	522229474ff554a4ce883002011d0fbb
+# Source0-md5:	70a3572bcf8148a46cc26727223a8a75
 URL:		http://gobby.0x539.de/
+BuildRequires:	autoconf
+BuildRequires:	automake
 BuildRequires:	libsigc++-devel
+BuildRequires:	libtool
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -56,6 +59,10 @@ aplicativos estáticos que usam net6.
 %setup -q
 
 %build
+%{__libtoolize}
+%{__aclocal}
+%{__automake}
+%{__autoconf}
 %configure
 %{__make}
 
