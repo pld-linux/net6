@@ -1,12 +1,12 @@
 Summary:	Net6 network library
 Summary(pl):	Biblioteka sieciowa net6
 Name:		net6
-Version:	1.2.0
+Version:	1.2.1
 Release:	1
 License:	BSD
 Group:		Libraries
 Source0:	http://releases.0x539.de/net6/%{name}-%{version}.tar.gz
-# Source0-md5:	70a3572bcf8148a46cc26727223a8a75
+# Source0-md5:	e5e22450144b7a788955164729ef5034
 URL:		http://gobby.0x539.de/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -73,13 +73,15 @@ install -d $RPM_BUILD_ROOT{%{_examplesdir}/%{name}-%{version},%{_mandir}/man3}
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
+%find_lang %{name}
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %post   -p /sbin/ldconfig
 %postun -p /sbin/ldconfig
 
-%files
+%files -f %{name}.lang
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/lib*.so.*.*
 
