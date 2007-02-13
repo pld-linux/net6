@@ -1,5 +1,5 @@
 Summary:	Net6 network library
-Summary(pl.UTF-8):   Biblioteka sieciowa net6
+Summary(pl.UTF-8):	Biblioteka sieciowa net6
 Name:		net6
 Version:	1.2.2
 Release:	1
@@ -22,8 +22,8 @@ Biblioteka sieciowa net6.
 
 %package devel
 Summary:	Header files for net6
-Summary(pl.UTF-8):   Pliki nagłówkowe biblioteki net6
-Summary(pt_BR.UTF-8):   Arquivos do pacote net6 para desenvolvimento
+Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki net6
+Summary(pt_BR.UTF-8):	Arquivos do pacote net6 para desenvolvimento
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	libsigc++-devel
@@ -40,8 +40,8 @@ aplicativos que usam net6.
 
 %package static
 Summary:	Static net6 library
-Summary(pl.UTF-8):   Biblioteka statyczna net6
-Summary(pt_BR.UTF-8):   Arquivos do pacote net6 para desenvolvimento estático
+Summary(pl.UTF-8):	Biblioteka statyczna net6
+Summary(pt_BR.UTF-8):	Arquivos do pacote net6 para desenvolvimento estático
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
