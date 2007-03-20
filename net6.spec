@@ -10,6 +10,7 @@ Source0:	http://releases.0x539.de/net6/%{name}-%{version}.tar.gz
 URL:		http://gobby.0x539.de/
 BuildRequires:	autoconf
 BuildRequires:	automake
+BuildRequires:	gettext-devel
 BuildRequires:	libsigc++-devel
 BuildRequires:	libtool
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -59,6 +60,8 @@ aplicativos estáticos que usam net6.
 %setup -q
 
 %build
+rm -f *.m4
+%{__gettextize}
 %{__libtoolize}
 %{__aclocal}
 %{__automake}
