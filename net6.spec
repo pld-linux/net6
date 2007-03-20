@@ -1,5 +1,5 @@
 Summary:	Net6 network library
-Summary(pl.UTF-8):	Biblioteka sieciowa net6
+Summary(pl):	Biblioteka sieciowa net6
 Name:		net6
 Version:	1.2.2
 Release:	1
@@ -17,13 +17,13 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Net6 network library.
 
-%description -l pl.UTF-8
+%description -l pl
 Biblioteka sieciowa net6.
 
 %package devel
 Summary:	Header files for net6
-Summary(pl.UTF-8):	Pliki nagÅ‚Ã³wkowe biblioteki net6
-Summary(pt_BR.UTF-8):	Arquivos do pacote net6 para desenvolvimento
+Summary(pl):	Pliki nag³ówkowe biblioteki net6
+Summary(pt_BR):	Arquivos do pacote net6 para desenvolvimento
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	libsigc++-devel
@@ -31,29 +31,29 @@ Requires:	libsigc++-devel
 %description devel
 Header files for net6.
 
-%description devel -l pl.UTF-8
-Pliki nagÅ‚Ã³wkowe biblioteki net6.
+%description devel -l pl
+Pliki nag³ówkowe biblioteki net6.
 
-%description devel -l pt_BR.UTF-8
-Arquivos de cabeÃ§alho e bibliotecas usadas no desenvolvimento de
+%description devel -l pt_BR
+Arquivos de cabeçalho e bibliotecas usadas no desenvolvimento de
 aplicativos que usam net6.
 
 %package static
 Summary:	Static net6 library
-Summary(pl.UTF-8):	Biblioteka statyczna net6
-Summary(pt_BR.UTF-8):	Arquivos do pacote net6 para desenvolvimento estÃ¡tico
+Summary(pl):	Biblioteka statyczna net6
+Summary(pt_BR):	Arquivos do pacote net6 para desenvolvimento estático
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static net6 library.
 
-%description static -l pl.UTF-8
+%description static -l pl
 Biblioteka statyczna net6.
 
-%description static -l pt_BR.UTF-8
-Arquivos de cabeÃ§alho e bibliotecas usadas no desenvolvimento de
-aplicativos estÃ¡ticos que usam net6.
+%description static -l pt_BR
+Arquivos de cabeçalho e bibliotecas usadas no desenvolvimento de
+aplicativos estáticos que usam net6.
 
 %prep
 %setup -q
