@@ -2,7 +2,7 @@ Summary:	Net6 network library
 Summary(pl.UTF-8):	Biblioteka sieciowa net6
 Name:		net6
 Version:	1.3.4
-Release:	1
+Release:	2
 License:	BSD
 Group:		Libraries
 Source0:	http://releases.0x539.de/net6/%{name}-%{version}.tar.gz
