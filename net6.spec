@@ -15,6 +15,7 @@ BuildRequires:	gnutls-devel >= 1.0.0
 BuildRequires:	libsigc++-devel >= 2.0
 BuildRequires:	libstdc++-devel
 BuildRequires:	libtool >= 2:1.5
+BuildRequires:	pkgconfig
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
