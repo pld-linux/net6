@@ -14,7 +14,7 @@ BuildRequires:	gettext-devel >= 0.15
 BuildRequires:	gnutls-devel >= 1.0.0
 BuildRequires:	libsigc++-devel >= 2.0
 BuildRequires:	libstdc++-devel
-BuildRequires:	libtool
+BuildRequires:	libtool >= 2:1.5
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
