@@ -1,12 +1,12 @@
 Summary:	Net6 network library
 Summary(pl.UTF-8):	Biblioteka sieciowa net6
 Name:		net6
-Version:	1.3.4
-Release:	3
+Version:	1.3.9
+Release:	1
 License:	LGPL v2.1+
 Group:		Libraries
 Source0:	http://releases.0x539.de/net6/%{name}-%{version}.tar.gz
-# Source0-md5:	3e6a5bbe1d6fc8d0a3c295323114cbb0
+# Source0-md5:	afab12d33fc201a7dbc2cfa116218079
 URL:		http://gobby.0x539.de/
 BuildRequires:	autoconf >= 2.59
 BuildRequires:	automake >= 1:1.9
