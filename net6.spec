@@ -10,7 +10,7 @@ Source0:	http://releases.0x539.de/net6/%{name}-%{version}.tar.gz
 URL:		http://gobby.0x539.de/
 BuildRequires:	autoconf >= 2.59
 BuildRequires:	automake >= 1:1.9
-BuildRequires:	gettext-devel >= 0.15
+BuildRequires:	gettext-tools >= 0.15
 BuildRequires:	gnutls-devel >= 1.0.0
 BuildRequires:	libsigc++-devel >= 2.0
 BuildRequires:	libstdc++-devel
