@@ -1,17 +1,18 @@
 Summary:	Net6 network library
 Summary(pl.UTF-8):	Biblioteka sieciowa net6
 Name:		net6
-Version:	1.3.9
-Release:	3
+Version:	1.3.14
+Release:	1
 License:	LGPL v2.1+
 Group:		Libraries
 Source0:	http://releases.0x539.de/net6/%{name}-%{version}.tar.gz
-# Source0-md5:	afab12d33fc201a7dbc2cfa116218079
+# Source0-md5:	be6db739f71c5c08421bf6181e77f3b2
+Patch0:		%{name}-gnutls.patch
 URL:		http://gobby.0x539.de/
 BuildRequires:	autoconf >= 2.59
 BuildRequires:	automake >= 1:1.9
 BuildRequires:	gettext-tools >= 0.15
-BuildRequires:	gnutls-devel >= 1.0.0
+BuildRequires:	gnutls-devel >= 2.2
 BuildRequires:	libsigc++-devel >= 2.0
 BuildRequires:	libstdc++-devel
 BuildRequires:	libtool >= 2:1.5
@@ -34,7 +35,7 @@ Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki net6
 Summary(pt_BR.UTF-8):	Arquivos do pacote net6 para desenvolvimento
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
-Requires:	gnutls-devel >= 1.0.0
+Requires:	gnutls-devel >= 2.2
 Requires:	libsigc++-devel >= 2.0
 
 %description devel
@@ -66,6 +67,7 @@ aplicativos estáticos que usam net6.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 %{__gettextize}
@@ -100,7 +102,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/libnet6.so
 %{_libdir}/libnet6.la
-%{_includedir}/%{name}
+%{_includedir}/net6
 %{_pkgconfigdir}/net6-1.3.pc
 
 %files static
