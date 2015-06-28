@@ -2,12 +2,13 @@ Summary:	Net6 network library
 Summary(pl.UTF-8):	Biblioteka sieciowa net6
 Name:		net6
 Version:	1.3.14
-Release:	1
+Release:	2
 License:	LGPL v2.1+
 Group:		Libraries
 Source0:	http://releases.0x539.de/net6/%{name}-%{version}.tar.gz
 # Source0-md5:	be6db739f71c5c08421bf6181e77f3b2
 Patch0:		%{name}-gnutls.patch
+Patch1:		long-long.patch
 URL:		http://gobby.0x539.de/
 BuildRequires:	autoconf >= 2.59
 BuildRequires:	automake >= 1:1.9
@@ -68,6 +69,7 @@ aplicativos estáticos que usam net6.
 %prep
 %setup -q
 %patch0 -p1
+%patch1 -p1
 
 %build
 %{__gettextize}
