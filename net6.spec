@@ -2,7 +2,7 @@ Summary:	Net6 network library
 Summary(pl.UTF-8):	Biblioteka sieciowa net6
 Name:		net6
 Version:	1.3.14
-Release:	2
+Release:	3
 License:	LGPL v2.1+
 Group:		Libraries
 Source0:	http://releases.0x539.de/net6/%{name}-%{version}.tar.gz
@@ -15,7 +15,7 @@ BuildRequires:	automake >= 1:1.9
 BuildRequires:	gettext-tools >= 0.15
 BuildRequires:	gnutls-devel >= 2.2
 BuildRequires:	libsigc++-devel >= 2.0
-BuildRequires:	libstdc++-devel
+BuildRequires:	libstdc++-devel >= 6:4.3
 BuildRequires:	libtool >= 2:1.5
 BuildRequires:	pkgconfig
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -77,6 +77,7 @@ aplicativos estáticos que usam net6.
 %{__aclocal}
 %{__automake}
 %{__autoconf}
+CXXFLAGS="%{rpmcxxflags} -std=c++0x"
 %configure
 %{__make}
 
