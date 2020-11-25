@@ -2,14 +2,14 @@ Summary:	Net6 network library
 Summary(pl.UTF-8):	Biblioteka sieciowa net6
 Name:		net6
 Version:	1.3.14
-Release:	4
+Release:	5
 License:	LGPL v2.1+
 Group:		Libraries
 Source0:	http://releases.0x539.de/net6/%{name}-%{version}.tar.gz
 # Source0-md5:	be6db739f71c5c08421bf6181e77f3b2
 Patch0:		%{name}-gnutls.patch
 Patch1:		long-long.patch
-URL:		http://gobby.0x539.de/
+URL:		https://gobby.github.io/
 BuildRequires:	autoconf >= 2.59
 BuildRequires:	automake >= 1:1.9
 BuildRequires:	gettext-tools >= 0.15
@@ -74,9 +74,10 @@ aplicativos estáticos que usam net6.
 %build
 %{__gettextize}
 %{__libtoolize}
-%{__aclocal}
-%{__automake}
+%{__aclocal} -I m4
 %{__autoconf}
+%{__autoheader}
+%{__automake}
 CXXFLAGS="%{rpmcxxflags} -std=c++0x"
 %configure
 %{__make}
@@ -86,6 +87,9 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
+
+# obsoleted by pkg-config
+%{__rm} $RPM_BUILD_ROOT%{_libdir}/libnet6.la
 
 %find_lang %{name}
 
@@ -104,7 +108,6 @@ rm -rf $RPM_BUILD_ROOT
 %files devel
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/libnet6.so
-%{_libdir}/libnet6.la
 %{_includedir}/net6
 %{_pkgconfigdir}/net6-1.3.pc
 
